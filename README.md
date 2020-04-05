@@ -11,7 +11,7 @@ Find The Word (FTW) is a game where player have to find correct word.
 
 ## PREREQUISITES 
 
-* Make sure aicrack-ng is updated
+* Make sure aircrack-ng is updated
 * Make sure you know the BSSID and CHANNEL of your target (lol)
 
 ### HOW TO SEE BSSID AND CHANNEL OF A WIFI ?
