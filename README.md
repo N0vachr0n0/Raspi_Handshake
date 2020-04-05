@@ -2,9 +2,6 @@
 
 Raspi_Handshake is a tool to capture automatically handshake with a Raspberry pi or Kali / Parrot desktop over ssh connection.
 
-# FTW
-
-Find The Word (FTW) is a game where player have to find correct word.
 
 # HOW TO INSTALL AND RUN ?
 
