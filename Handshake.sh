@@ -1,7 +1,7 @@
 #!/bin/bash
 
 mon="mon"
-path= pwd
+path=$(pwd)
 file="/nohup.out"
 
 echo "Raspi_Handshake running ..."
