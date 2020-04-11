@@ -24,12 +24,14 @@ sudo airmon-ng check kill >> log_airmon-ng 2>> ./log/log_err_airmong-ng
 echo '--------------------------------------' >> ./log/log_airmon-ng
 sudo airmon-ng start wlan1 $chan >> ./log/log_airmon-ng 2>> ./log/log_err_airmon-ng
 echo '--------------------------------------' >> ./log/log_airmon-ng
-echo "sudo airodump-ng -c $chan --bssid $bssid -w psk wlan1mon &" >> auto_airodump.sh
+echo "sudo airodump-ng -c $chan --bssid $bssid -w psk $interface$mon &" >> auto_airodump.sh
 echo "sudo sleep 10" >> auto_airodump.sh
 echo "sudo killall aireplay-ng" >> auto_airodump.sh
 echo "sudo sleep 25" >> auto_airodump.sh
 echo "sudo killall airodump-ng" >> auto_airodump.sh
+echo "sudo airmon-ng stop $interface$mon" >> auto_airodump.sh
 echo "sudo service NetworkManager restart" >> auto_airodump.sh
+echo "sudo rm -rf auto_airodump.sh" >> auto_airodump.sh
 echo "sudo reboot" >> auto_airodump.sh
 sudo chmod +x auto_airodump.sh
 nohup ./auto_airodump.sh & 
