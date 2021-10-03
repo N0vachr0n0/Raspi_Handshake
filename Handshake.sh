@@ -22,7 +22,7 @@ mkdir ./log/
 echo "* * * * * > $path$file" > /var/spool/cron/crontabs/root
 sudo airmon-ng check kill >> log_airmon-ng 2>> ./log/log_err_airmong-ng
 echo '--------------------------------------' >> ./log/log_airmon-ng
-sudo airmon-ng start wlan1 $chan >> ./log/log_airmon-ng 2>> ./log/log_err_airmon-ng
+sudo airmon-ng start $interface $chan >> ./log/log_airmon-ng 2>> ./log/log_err_airmon-ng
 echo '--------------------------------------' >> ./log/log_airmon-ng
 echo "sudo airodump-ng -c $chan --bssid $bssid -w psk $interface$mon &" >> auto_airodump.sh
 echo "sudo sleep 10" >> auto_airodump.sh
